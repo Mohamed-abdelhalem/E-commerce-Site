@@ -355,7 +355,8 @@ box-shadow: 0 0 0 0;
   font-size: 2em;
   color: var(--text-color);
 }
-.carousel-item .carousel_search
+.carousel-item .carousel_search,
+.content_wrap .carousel_search
 {
   width: 40%;
   padding: 15px 20px;
@@ -552,7 +553,8 @@ box-shadow: 0 0 0 0;
   color: var(--text-color);
 }
 .products_popular_inside .description,
-.content_counter .description
+.content_counter .description,
+.content_seller_inside .details_seller .description
 {
   color: var(--heading-Color);
   font-size: 1.1em;
@@ -566,37 +568,43 @@ box-shadow: 0 0 0 0;
   transition: var(--main-transation) ease-in-out;
 }
 .products_popular_inside .stars i,
-.content_counter .stars i
+.content_counter .stars i,
+.content_seller_inside .stars i
 {
   color: gold;
   font-size: .75rem
 }
 .products_popular_inside .by,
-.content_counter .by
+.content_counter .by,
+.content_seller_inside .by
 {
   color: var(--text-color);
   font-size: 1rem;
 }
 .products_popular_inside .name_of_owner,
-.content_counter .name_of_owner
+.content_counter .name_of_owner,
+.content_seller_inside .name_of_owner
 {
   color: var(--main-color);
 }
 .products_popular_inside .name_of_owner:hover,
-.content_counter .name_of_owner:hover
+.content_counter .name_of_owner:hover,
+.content_seller_inside .name_of_owner:hover
 {
   color: gold;
   transition: all var(--main-transation) ease-in-out;
 }
 .products_popular_inside .price_button .price .main_price,
-.content_counter .price_button .price .main_price
+.content_counter .price_button .price .main_price,
+.content_seller_inside  .price_button .price .main_price
 {
     color: var(--main-color);
     font-size: 1.2rem;
     font-weight: 600;
 }
 .products_popular_inside .price_button .price .old_price,
-.content_counter .price_button .price .old_price
+.content_counter .price_button .price .old_price,
+.content_seller_inside  .price_button .price .old_price
 {
   text-decoration: line-through;
   color: var(--text-color);
@@ -623,15 +631,30 @@ box-shadow: 0 0 0 0;
    transition: all var(--main-transation) ease-in-out;
    background-color: var(--main-color);
 }
-.deals .advertise
+.deals .advertise,
+.sellers
 {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-  gap: 20px;
+  gap: 30px;
+}
+.content_seller_inside
+{
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+}
+.content_seller_inside:hover
+{
+  transform: translateY(-10px);
+  transition: all var(--main-transation) ease-in-out;
+  cursor: pointer;
+
 }
 .deals .advertise .deal
 {
   position: relative;
+  margin: 70px 0
 }
 .deals .advertise .deal .counter
 {
@@ -650,6 +673,48 @@ box-shadow: 0 0 0 0;
 .deals .advertise .deal img
 {
   border-radius: 15px;
+}
+.sellers .seller_content .h3
+{
+  color: var(--heading-Color);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 25px;
+  position: relative;
+}
+.sellers .seller_content .h3::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #BCE3C9;
+    width: 100px;
+    height: 2.5px;
+}
+.wrapper
+{
+  background-color: #3bb77e33;
+  border-radius: 10px;
+  position: relative;
+  height: 65vh;
+}
+.wrapper .content_wrap
+{
+  position: absolute;
+  left: 5%;
+  width: 50%;
+}
+.wrapper .content_wrap .text_wrap
+{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-Color);
+}
+.wrapper .content_wrap .text2_wrap
+{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
 .banners .banner_product .logo
 {
@@ -892,7 +957,10 @@ transition:  var(--main-transation) ease-in-out;
    .carousel-item .text_extra {
        font-size: 1em;
    }
-   .carousel-item .carousel_search {
+   .carousel-item .carousel_search ,
+   .content_wrap .carousel_search
+
+   {
        width: 60%;
        padding: 5px 20px;
        border-radius: 25px;
@@ -980,7 +1048,9 @@ transition:  var(--main-transation) ease-in-out;
     border-radius: 1em !important;
     height: 300px;
 }
-.carousel-item .carousel_search {
+.carousel-item .carousel_search ,
+.content_wrap .carousel_search
+{
     width: 100%;
     padding: 5px 20px;
     border-radius: 25px;
@@ -1003,5 +1073,25 @@ transition:  var(--main-transation) ease-in-out;
 .deals .h1
 {
   text-align: center;
+}
+.wrapper .content_wrap
+{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  padding: 10px;
+}
+.wrapper .content_wrap .text_wrap
+{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading-Color);
+}
+.wrapper .content_wrap .text2_wrap
+{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--main-color);
 }
 }

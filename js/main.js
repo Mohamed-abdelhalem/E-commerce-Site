@@ -15,12 +15,9 @@ $(document).ready(function ()
 
   // for display divs with class product in the container div with class products
   var data_product ="<div class='product d-flex flex-column  p-2'>  </div>";
-  //let div = [];
   //append product div into products div
   for(let i = 0 ; i < 10 ; i++)
   {
-    //div[i] = data_product;
-    //console.log(div[i]);
     $('.products').append(data_product);
   }
   // <p> of product
@@ -44,12 +41,9 @@ $(document).ready(function ()
 
   // for display divs with class products_popular_inside in the container div with class products_popular
   var data_product_Popular ="<div class='products_popular_inside d-flex flex-column  p-3' >  </div>";
-  //let div = [];
   //append product div into products div
   for(let i = 1 ; i <= 10 ; i++)
   {
-    //div[i] = data_product;
-    //console.log(div[i]);
     $('.products_popular').append(data_product_Popular);
   }
 
@@ -63,6 +57,7 @@ $(document).ready(function ()
                     ,"<p class='description'>Angie’s Boomchickapop Sweet & Salty Kettle Corn</p>","<p class='description'>Foster Farms Takeout Crispy Buffalo Wings</p>"
                     ,"<p class='description'>Blue Diamond Almonds Lightly Salted Vegetables</p>","<p class='description'>Chobani Complete Vanilla Greek Yogurt</p>"
                     ,"<p class='description'>Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</p>","<p class='description'>Encore Seafoods Stuffed Alaskan Salmon</p>"
+                    ,"<p class='description'>Gorton’s Beer Battered Fish Fillets with soft paper</p>","<p class='description'>Haagen-Dazs Caramel Cone Ice Cream Ketchup</p>"
                     ,"<p class='description'>Gorton’s Beer Battered Fish Fillets with soft paper</p>","<p class='description'>Haagen-Dazs Caramel Cone Ice Cream Ketchup</p>"];
  // div of icons and icons (Star Icons)
  let divStar = "<div class='stars'></div>";
@@ -77,12 +72,18 @@ $(document).ready(function ()
   let mainPrice = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ];
  // price-btn div of product_inside
  let priceBtn = `<div class='price_button d-flex justify-content-between align-items-center'>
-                      <div class= 'price' >
-                          <span class='main_price me-1'>${'$' + 28.85}</span>
-                          <span class='old_price '>${'$' + 32.8}</span>
-                      </div>
-                      <button type="button" name="button" class="btn_add"> <i class="fa-solid fa-cart-shopping"></i> Add</button>
-                  </div>`;
+                               <div class= 'price' >
+                                    <span class='main_price me-1'>${'$' + 28.85}</span>
+                                   <span class='old_price '>${'$' + 32.8}</span>
+                              </div>
+                              <button type="button" name="button" class="btn_add"> <i class="fa-solid fa-cart-shopping"></i> Add</button>
+                           </div>`;
+ let priceBtnWithOutAdd = `<div class='price_button d-flex justify-content-between align-items-center'>
+                               <div class= 'price' >
+                                    <span class='main_price me-1'>${'$' + 28.85}</span>
+                                   <span class='old_price '>${'$' + 32.8}</span>
+                              </div>
+                           </div>`;
  //<span> of old & main price and btn
  let price = "<div class= 'price' ></div>";
  let btnAdd = "<button type='button' name='button' class='btn_add'> <i class='fa-solid fa-cart-shopping'></i> Add</button>";
@@ -106,14 +107,36 @@ $(document).ready(function ()
       $(this).append(by[i]);
       $(this).append(priceBtn);
   });
-  for(let i = 1 ; i <= 5 ; i++)
+
+  // for display divs with classcontent_seller_inside in the container div with class seller_content
+  let dataSeller ="<div class ='content_seller_inside p-2 my-3 d-flex'>  </div>";
+  // for
+  let divDetails = "<div class='details_seller d-flex flex-column ms-2'> </div>"
+  //append product div into products div
+  for(let i = 1 ; i <= 3 ; i++)
   {
-    if(i == 5)
-      $('.stars').append(iconStarWhite);
-    else
-     $('.stars').append(iconStar);
+    $('.seller_content').append(dataSeller);
   }
 
+  $('.content_seller_inside').each( function (i)
+  {
+      $(this).append("<img  src='imgs/thumbnail-"+(++i)+".jpeg' alt = 'featured-Products-img' width='95px' height='130px'  />");
+      $(this).append(divDetails);
+ });
+ $('.details_seller').each( function ( i)
+ {
+     $(this).append(description[++i]);
+     $(this).append(divStar);
+     $(this).append(by[i]);
+     $(this).append(priceBtnWithOutAdd);
+ });
+ for(let i = 1 ; i <= 5 ; i++)
+ {
+   if(i == 5)
+     $('.stars').append(iconStarWhite);
+   else
+    $('.stars').append(iconStar);
+ }
 
 
 
