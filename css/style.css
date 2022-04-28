@@ -1,5 +1,5 @@
 *{box-sizing: border-box;}
-body{margin: 0;padding: 0; background-color: white}
+body{margin: 0;padding: 0; background-color: white;}
 :root {
     --main-color: #3bb77e;
     --heading-Color: #253d4e;
@@ -14,7 +14,8 @@ body{margin: 0;padding: 0; background-color: white}
     --color-div_5:#FFF3EB;
     --color-div_6:#FFF3FF;
 }
-.btn:focus
+.btn:focus,
+..btn_add:focus
 {
   outline: none;
   border: 0;
@@ -415,23 +416,19 @@ box-shadow: 0 0 0 0;
 {
     background-color: var(--main-color) !important;
 }
-.heading .main_title p
+.heading  p
 {
-  font-size: 25px;
-  font-weight: 600;
   color: var(--heading-Color);
   cursor: pointer;
-  margin-bottom: 0;
 }
-.heading .main_title .ul_features li a
+.heading  .ul_features li a
 {
-  font-size: 18px;
   text-decoration: none;
   color: var(--heading-Color);
   cursor: pointer;
-  display: block;
+  display: inline-block;
 }
-.heading .main_title .ul_features li a:hover
+.heading  .ul_features li a:hover
 {
   color: var(--main-color);
   transform:  translateY(-10px);
@@ -461,10 +458,26 @@ box-shadow: 0 0 0 0;
 {
   transform: translateX(10px);
 }
+.products_popular
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px 20px;
 
+  }
+.products_popular  .products_popular_inside
+{
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
 .product
 {
   width:  calc(10% - 20px);
+}
+.product
+{
   height: 10%;
   border: 1px solid #7e7e7e38;
   border-radius: 20px;
@@ -472,13 +485,16 @@ box-shadow: 0 0 0 0;
   margin: 10px;
   cursor: pointer;
 }
-.product:hover
+.product:hover,
+.products_popular_inside:hover
 {
   border: 1px solid #ECFFEC;
   box-shadow: 0px 0px 5px 1px #7e7e7e;
-  transition: var(--main-transation) ease-in-out;
+  transition: all var(--main-transation) ease-in-out;
+  cursor: pointer;
 }
-.product:hover img
+.product:hover img,
+.products_popular_inside:hover img
 {
   transform: scale(1.05);
   transition: var(--main-transation) ease-in-out;
@@ -499,6 +515,78 @@ box-shadow: 0 0 0 0;
   font-size: 17px;
   font-weight: 400;
   color: #7e7e7e;
+}
+..products_popular_inside img
+{
+  width: 250px;
+  max-width: 100%;
+}
+.products_popular_inside .type_food
+{
+  color: var(--text-color);
+  font-size: 13px;
+}
+.products_popular_inside .description
+{
+  color: var(--heading-Color);
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.products_popular_inside .description:hover
+{
+  color: var(--main-color);
+  transition: var(--main-transation) ease-in-out;
+}
+.products_popular_inside .stars i
+{
+  color: gold;
+  font-size: .75rem
+}
+.products_popular_inside .by
+{
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.products_popular_inside .name_of_owner
+{
+  color: var(--main-color);
+}
+.products_popular_inside .name_of_owner:hover
+{
+  color: gold;
+  transition: all var(--main-transation) ease-in-out;
+}
+.products_popular_inside .price_button .price .main_price
+{
+    color: var(--main-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.products_popular_inside .price_button .price .old_price
+{
+  text-decoration: line-through;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.products_popular_inside .price_button .btn_add
+{
+   color: var(--main-color);
+   width: 32%;
+   padding: 5px;
+   border-radius: 5px;
+   border: none;
+   font-weight: 500;
+   background-color: #3bb77e33;
+   display: inline-block;
+}
+.products_popular_inside .price_button .btn_add:hover
+{
+   color: white;
+   transform: translateY(-7px);
+   transition: all var(--main-transation) ease-in-out;
+   background-color: var(--main-color);
 }
 .banners .banner_product .logo
 {
@@ -544,6 +632,7 @@ box-shadow: 0 0 0 0;
   width: 100px;
   height: 30px;
   border-radius: 5px;
+
 }
 .banners .logo button:focus
 {
@@ -837,5 +926,14 @@ transition:  var(--main-transation) ease-in-out;
     width: 50%;
     padding: 5px 10px;
     border-radius: 25px;
+}
+.banners .logo button
+{
+  width: 130px;
+}
+.carousel .left, .carousel .right {
+
+    width: 2.5em;
+    height: 2.5em;
 }
 }
