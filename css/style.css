@@ -516,7 +516,7 @@ box-shadow: 0 0 0 0;
   font-weight: 400;
   color: #7e7e7e;
 }
-..products_popular_inside img
+.products_popular_inside img
 {
   width: 250px;
   max-width: 100%;
@@ -526,51 +526,85 @@ box-shadow: 0 0 0 0;
   color: var(--text-color);
   font-size: 13px;
 }
-.products_popular_inside .description
+.content_counter
+{
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+}
+.deal:hover .counter
+{
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: var(--main-transation) ease-in-out;
+}
+.counter .days .time:hover
+{
+ transform: scale(1.2);
+ transition: var(--main-transation) ease-in-out;
+}
+.counter .days .time p:first-child
+{
+  color: var(--main-color);
+  font-weight: 500;
+}
+.counter .days .time p:last-child
+{
+  color: var(--text-color);
+}
+.products_popular_inside .description,
+.content_counter .description
 {
   color: var(--heading-Color);
   font-size: 1.1em;
   font-weight: 600;
   margin-bottom: 2px;
 }
-.products_popular_inside .description:hover
+.products_popular_inside .description:hover,
+.content_counter .description:hover
 {
   color: var(--main-color);
   transition: var(--main-transation) ease-in-out;
 }
-.products_popular_inside .stars i
+.products_popular_inside .stars i,
+.content_counter .stars i
 {
   color: gold;
   font-size: .75rem
 }
-.products_popular_inside .by
+.products_popular_inside .by,
+.content_counter .by
 {
   color: var(--text-color);
   font-size: 1rem;
 }
-.products_popular_inside .name_of_owner
+.products_popular_inside .name_of_owner,
+.content_counter .name_of_owner
 {
   color: var(--main-color);
 }
-.products_popular_inside .name_of_owner:hover
+.products_popular_inside .name_of_owner:hover,
+.content_counter .name_of_owner:hover
 {
   color: gold;
   transition: all var(--main-transation) ease-in-out;
 }
-.products_popular_inside .price_button .price .main_price
+.products_popular_inside .price_button .price .main_price,
+.content_counter .price_button .price .main_price
 {
     color: var(--main-color);
     font-size: 1.2rem;
     font-weight: 600;
 }
-.products_popular_inside .price_button .price .old_price
+.products_popular_inside .price_button .price .old_price,
+.content_counter .price_button .price .old_price
 {
   text-decoration: line-through;
   color: var(--text-color);
   font-size: 0.9rem;
   font-weight: 500;
 }
-.products_popular_inside .price_button .btn_add
+.products_popular_inside .price_button .btn_add,
+.content_counter .price_button .btn_add
 {
    color: var(--main-color);
    width: 32%;
@@ -581,12 +615,41 @@ box-shadow: 0 0 0 0;
    background-color: #3bb77e33;
    display: inline-block;
 }
-.products_popular_inside .price_button .btn_add:hover
+.products_popular_inside .price_button .btn_add:hover,
+.content_counter .price_button .btn_add:hover
 {
    color: white;
    transform: translateY(-7px);
    transition: all var(--main-transation) ease-in-out;
    background-color: var(--main-color);
+}
+.deals .advertise
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  gap: 20px;
+}
+.deals .advertise .deal
+{
+  position: relative;
+}
+.deals .advertise .deal .counter
+{
+  position: absolute;
+  top: 50%;
+  left : 5%;
+  width: 90%;
+}
+.deals .advertise .deal .counter .days .time
+{
+  width: 20%;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+.deals .advertise .deal img
+{
+  border-radius: 15px;
 }
 .banners .banner_product .logo
 {
@@ -927,13 +990,18 @@ transition:  var(--main-transation) ease-in-out;
     padding: 5px 10px;
     border-radius: 25px;
 }
-.banners .logo button
-{
-  width: 130px;
-}
+.banners .logo button {  width: 130px; }
 .carousel .left, .carousel .right {
-
     width: 2.5em;
     height: 2.5em;
+}
+.products_popular_inside img
+{
+  height: 400px;
+  width: 100%;
+}
+.deals .h1
+{
+  text-align: center;
 }
 }

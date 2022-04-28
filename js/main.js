@@ -87,12 +87,21 @@ $(document).ready(function ()
  let price = "<div class= 'price' ></div>";
  let btnAdd = "<button type='button' name='button' class='btn_add'> <i class='fa-solid fa-cart-shopping'></i> Add</button>";
 
-  //append <img> & <p> & <span> & backgroundColor to product div
+  //append <img> & <p> & <span> &  to product_inside div
   $('.products_popular_inside').each( function (i)
   {
       $(this).append("<img  src='imgs/pic-"+(++i)+".png' alt = 'popular-Products-img'  />");
       $(this).append(typeFood[i]);
       $(this).append(description[i]);
+      $(this).append(divStar);
+      $(this).append(by[i]);
+      $(this).append(priceBtn);
+  });
+
+  //append <div stars> & <p> & <span> &  to deal div
+  $('.content_counter').each( function ( i)
+  {
+      $(this).append(description[++i]);
       $(this).append(divStar);
       $(this).append(by[i]);
       $(this).append(priceBtn);
