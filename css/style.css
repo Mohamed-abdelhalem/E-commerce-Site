@@ -368,9 +368,16 @@ box-shadow: 0 0 0 0;
   padding: 15px 20px;
   border-radius: 25px;
 }
-
+.slide_container .left,
+.slide_container .right
+{
+  padding: 8px 12px;
+  z-index: 1000000;
+}
 .carousel .left,
-.carousel .right
+.carousel .right,
+.slide_container .left,
+.slide_container .right
 {
   position: absolute;
   top: 40%;
@@ -379,19 +386,24 @@ box-shadow: 0 0 0 0;
   width: 2em;
   height: 2em;
   color: var(--heading-Color);
+  cursor: pointer;
 }
 .carousel .left:hover,
-.carousel .right:hover
+.carousel .right:hover,
+.slide_container .left:hover,
+.slide_container .right:hover
 {
   color: white;
   background-color: #3bb77e;
   transition:  var(--main-transation) ease-in-out;
 }
-.carousel .right
+.carousel .right,
+.slide_container .right
 {
   right: 2%;
 }
-.carousel .left
+.carousel .left,
+.slide_container .left
 {
   left: 2%;
 }
@@ -422,18 +434,32 @@ box-shadow: 0 0 0 0;
   color: var(--heading-Color);
   cursor: pointer;
 }
-.heading  .ul_features li a
+.heading  .ul_features li a,
+.heading .ul_popular li a,
+.heading .ul_best_seller li a
 {
   text-decoration: none;
   color: var(--heading-Color);
   cursor: pointer;
   display: inline-block;
 }
-.heading  .ul_features li a:hover
+.heading  .ul_features li a:hover,
+.heading .ul_popular li a:hover,
+.heading .ul_best_seller li a:hover
 {
   color: var(--main-color);
   transform:  translateY(-10px);
   transition: var(--main-transation) ease-in-out all;
+}
+.best_seller .slider_best
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 300px);
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 }
 .btns_right_left button
 {
@@ -1070,7 +1096,8 @@ transition:  var(--main-transation) ease-in-out;
   height: 400px;
   width: 100%;
 }
-.deals .h1
+.deals .h1,
+.best_seller .h1
 {
   text-align: center;
 }

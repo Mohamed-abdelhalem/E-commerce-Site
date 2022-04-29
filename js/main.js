@@ -40,11 +40,14 @@ $(document).ready(function ()
   });
 
   // for display divs with class products_popular_inside in the container div with class products_popular
-  var data_product_Popular ="<div class='products_popular_inside d-flex flex-column  p-3' >  </div>";
+  var data_product_Popular ="<div class='products_popular_inside d-flex flex-column  p-3'></div>";
+  // for display divs with class products_popular_inside in the container div with class products_popular
+  var dataProductBestSeller ="<div class='products_best_seller_inside d-flex flex-column'></div>";
   //append product div into products div
   for(let i = 1 ; i <= 10 ; i++)
   {
     $('.products_popular').append(data_product_Popular);
+    $('.slider_best').append(data_product_Popular);
   }
 
   // <span> of product_inside
