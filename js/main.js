@@ -13,6 +13,13 @@ $(document).ready(function ()
   $('.hide_ul_phone').click(function()
        {      $('.for_abs').fadeOut(50);     });
 
+  // for display and hide the show menu at the shop page
+  $('.down_show').click(function()
+      {      $('.ul_show ').toggle(10);     });
+  // for display and hide the sort menu at the shop page
+  $('.down_sort').click(function()
+     {      $('.ul_sort ').toggle(10);     });
+
   // for display divs with class product in the container div with class products
   var data_product ="<div class='product d-flex flex-column  p-2'>  </div>";
   //append product div into products div
@@ -47,7 +54,7 @@ $(document).ready(function ()
   for(let i = 1 ; i <= 10 ; i++)
   {
     $('.products_popular').append(data_product_Popular);
-    $('.slider_best').append(data_product_Popular);
+
   }
 
   // <span> of product_inside
@@ -169,56 +176,34 @@ $(document).ready(function ()
       $(this).append(divSpan1[i]);
       $(this).append(divSpan2[i]);
     });
+    /// shop page
+    let flag = false;
+    for (let i = 0; i <= 10; i++)
+    {
+      if(i == 0 )
+      {
+        $('.pagination').append(`<button type="button" name="button">  <a href="#"><i class="fa-solid fa-left-long"></i></a> </button>`);
+        continue;
+      }
+      if(i == 10 )
+      {
+        $('.pagination').append(`<button type="button" name="button">  <a href="#"><i class="fa-solid fa-right-long"></i></a> </button>`);
+        continue;
+      }
+      if( i > 3 && i < 7)
+      {
+        if(flag)
+         continue;
+         else
+         {
+         $('.pagination').append(`<button type='button' name='button'>  <a href='#'>... </a> </button>`);
+         flag = true;
+       }
+      }
+      if( i <= 3 || i >= 7)
+      {
+        $('.pagination').append(`<button type='button' name='button'>  <a href='#'> ${i} </a> </button>`);
+      }
+
+    };
 }); //end
-
-
-
-/*
-let colors = ["F" ,  2  , "F" , "C" , "E" ,  4  ,
-              "F" , "F" , "F" , "C" , "E" , "B" ,
-              "E" , "C" , "F" , "F" , "E" , "C" ,
-              "F" , "E" , "E" , "F" , "E" , "A" ,
-              "F" , "F" , "F" ,  3  , "E" , "B" ,
-              "F" , "F" , "F" ,  3  , "F"  ,"F" ]
-
-              console.log(colors[Math.floor(Math.random()* colors.length)]);
-let color_hexa = [];
-
-
-  for( let i = 0 ; i < colors.length; i++ )
-  {
-     color_hexa.push(colors[i]);
-     if(i == 5)
-     "\n";
-}
-console.log(`#${color_hexa.join("")}`);
-let finalColor = `#${color_hexa.join("")}`;
-/*
-let div_bg = document.getElementsByClassName('product');
-div_bg.addAttribute("backgroundColor" , finalColor);
-/*
-
-
-let color_hexa = [];
-
-
-  for( let i = 0 ; i < 6 ; i++ )
- {
-      console.log(color_hexa.push(colors[Math.floor(Math.random()* colors.length)]));
-
-
-}
-*/
-/*
-let hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-let colorParts = [];
-
-for (let i = 0; i < 6; i++) {
- console.log(colorParts.push(hexArray[Math.floor(Math.random() * hexArray.length)]));
- let finalColor = `#${colorParts.join("")}`;
-
-document.body.append(finalColor);
-document.body.style.backgroundColor = finalColor;
-}
-*/
-//div_bg.style.backgroundColor = color[i];
