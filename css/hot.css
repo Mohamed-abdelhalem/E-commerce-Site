@@ -173,11 +173,137 @@ cursor: pointer;
   color: var(--heading-Color);
   font-weight: 500;
 }
-.category
+.banners
 {
   flex-basis: 20%;
 }
+.category,
+.fill_price,
+.new_product,
+.category .all_catg .main_catg
+{
+  border: 0.1px solid #ddd;
+  box-shadow: 0 0 0px 0.1px #ddd;
+  border-radius: 10px;
 
+}
+
+.category .h4,
+.fill_price .h4,
+.new_product .h4
+{
+  color: var(--heading-Color);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 26px;
+  position: relative;
+}
+.category .h4::before,
+.fill_price .h4::before,
+.new_product .h4::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #BCE3C9;
+    width: 100px;
+    height: 2.5px;
+}
+.category .all_catg .main_catg
+{
+  padding: 10px 20px;
+  width: 85%;
+  height: 70px;
+  gap:10px;
+  text-align: center;
+  cursor: pointer;
+}
+.category .all_catg .main_catg img
+{
+  width: 30px;
+}
+.category .all_catg .main_catg button
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  border: 0;
+  color: white;
+}
+.fill_price .h5
+{
+  color: var(--text-color);
+  font-weight: 600;
+}
+.fill_price .form-range
+{
+    width: 75%;
+    height: 1rem;
+    padding: 0;
+}
+.fill_price .form-range:focus
+{
+  outline: none;
+  border: 0;
+}
+.fill_price label
+{
+  color: var(--text-color);
+  cursor: pointer;
+}
+.fill_price .filter
+{
+  width: 50%;
+  border-radius:5px;
+}
+.fill_price input[type="checkbox"]
+{
+    appearance:none;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 2px solid #CED4DA;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+.fill_price input[type="checkbox"]:checked {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+.fill_price input[type="checkbox"]:checked::after {
+    display: block;
+}
+.fill_price  input[type="checkbox"]::after {
+    font-family: 'font awesome 6 free';
+    font-weight: 900;
+    content: '\f00c';
+    position: absolute;
+    color: white;
+    display: none;
+}
+.new_product .prod .h6
+{
+  color: var(--heading-Color);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.new_product .prod .h6:hover
+{
+  color: var(--main-color);
+  transition: var(--main-transation) ease-in-out;
+}
+.new_product .prod img
+{
+  width: 70px;
+  margin-right: 10px;
+}
 
 /** end main **/
 @media (max-width : 1199px)

@@ -278,12 +278,113 @@
         <div class="">
           <div class="products_popular container-fluid   justify-conter-between align-items-center my-5 mx-2"> </div> <!-- append data to it with JS -->
         </div>
-        <div class="pagination d-flex mx-2">
-           
+        <div class="pagination d-flex flex-wrap w-100 mx-2">
+
         </div>
       </section>
-      <aside class=" category ">
-          knwdlk;/
+      <aside class=" banners d-flex flex-column">
+       <div class="category d-flex flex-column  p-4 mb-2 ">
+          <span class="h4 ms-2" > Category </span>
+          <div class="all_catg   ">
+            <div class="main_catg d-flex justify-content-between align-items-center mt-3 mb-1 me-auto  ms-auto">
+              <img src="imgs/category-1.svg" alt="Category Image 1">
+              <span>Milk & Dairies</span>
+              <button type="button" name="button" > 30 </button>
+            </div>
+            <div class="main_catg d-flex justify-content-between align-items-center my-2 me-auto ms-auto">
+              <img src="imgs/category-2.svg" alt="Category Image 2">
+              <span> Clothing </span>
+              <button type="button" name="button" > 30 </button>
+            </div>
+            <div class="main_catg d-flex justify-content-between align-items-center my-2 me-auto ms-auto">
+              <img src="imgs/category-3.svg" alt="Category Image 3">
+              <span> Pets Foods </span>
+              <button type="button" name="button" > 10 </button>
+            </div>
+            <div class="main_catg d-flex justify-content-between align-items-center my-2 me-auto ms-auto">
+              <img src="imgs/category-4.svg" alt="Category Image 4">
+              <span> Backing material </span>
+              <button type="button" name="button" > 8 </button>
+            </div>
+            <div class="main_catg d-flex justify-content-between align-items-center my-2 me-auto ms-auto">
+              <img src="imgs/category-5.svg" alt="Category Image 5">
+              <span> Fresh Fruit </span>
+              <button type="button" name="button" > 0 </button>
+            </div>
+          </div>
+       </div>
+       <div class="fill_price d-flex flex-column p-4 my-2">
+          <span class="h4 ms-2 " > Fill by price </span>
+           <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+           <div class="price d-flex justify-content-between">
+             <span> From : 1300$ </span>
+             <span> to : 3600$ </span>
+           </div>
+           <div class="check_color d-flex flex-column">
+              <span class="h5 ms-2 mt-3" > Color </span>
+               <div class="ms-2 mt-2">
+                 <div class="d-flex align-items-center ">
+                   <input type="checkbox" name="color" id="red" class="me-2">
+                   <label for="red">Red (56)</label>
+                 </div>
+                 <div class="d-flex align-items-center">
+                   <input type="checkbox" name="color" id="green" class="me-2">
+                   <label for="green">Green (78)</label>
+                 </div>
+                 <div class="d-flex align-items-center">
+                   <input type="checkbox" name="color" id="blue" class="me-2">
+                   <label for="blue">Blue (54)</label>
+                 </div>
+               </div>
+          </div>
+
+           <div class="check_condition d-flex flex-column">
+              <span class="h5 ms-2 mt-3" > Item Condition </span>
+              <div class="ms-2 my-2">
+                <div class="d-flex align-items-center">
+                  <input type="checkbox" name="color" id="red" class="me-2">
+                  <label for="new">New (1506)</label>
+                </div>
+                <div class="d-flex align-items-center">
+                  <input type="checkbox" name="color" id="green" class="me-2">
+                  <label for="refurbished">Refurbished (27)</label>
+                </div>
+                <div class="d-flex align-items-center">
+                  <input type="checkbox" name="color" id="blue" class="me-2">
+                  <label for="used">Used (45)</label>
+                </div>
+              </div>
+           </div>
+           <button type="button" class="btn btn-success filter my-2"><i class="fa-solid fa-filter mx-1"></i> Filter</button>
+       </div>
+       <div class="new_product d-flex flex-column p-4 my-2">
+          <span class="h4 ms-2 " > New products </span>
+          <div class="prod d-flex  align-items-center my-3">
+            <img src="imgs/thumbnail-3.jpeg" alt="Category Image 2">
+            <div class="d-flex flex-column">
+              <span class="h6"> Chen Cardigan </span>
+              <span>$99.50</span>
+            </div>
+          </div>
+          <div class="prod d-flex  align-items-center my-3">
+            <img src="imgs/thumbnail-4.jpeg" alt="Category Image 2">
+            <div class="d-flex flex-column">
+              <span class="h6"> Chen Sweater </span>
+              <span>$79.50</span>
+            </div>
+          </div>
+          <div class="prod d-flex  align-items-center my-3">
+            <img src="imgs/thumbnail-5.jpeg" alt="Category Image 2" >
+            <div class="d-flex flex-column">
+              <span class="h6"> Colorful Jacket </span>
+              <span>$60</span>
+
+            </div>
+          </div>
+       </div>
+       <div class="advertise">
+
+       </div>
       </aside>
 
     </div>
