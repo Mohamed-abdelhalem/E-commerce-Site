@@ -162,17 +162,18 @@ cursor: pointer;
     background-color: var(--main-color);
     transition: var(--main-transation) ease-in-out;
 }
-.pagination button:hover a
-{
-  color: white;
-  transition: var(--main-transation) ease-in-out;
-}
 .pagination button a
 {
   text-decoration: none;
   color: var(--heading-Color);
   font-weight: 500;
 }
+.pagination button:hover a
+{
+  color: white;
+  transition: var(--main-transation) ease-in-out;
+}
+
 .banners
 {
   flex-basis: 20%;

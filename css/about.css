@@ -1,0 +1,188 @@
+/** start wrapper**/
+.wrapper_about
+{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.wrapper_about  ul li a
+{
+ text-decoration: none;
+ color: green;
+ font-size: 1rem;
+ font-weight: 500;
+}
+.wrapper_about ul li i
+{
+ color: var(--text-color);
+}
+.wrapper_about ul li a:hover,
+.wrapper_about ul li i:hover
+{
+color: gold;
+transition: var(--main-transation) ease-in-out;
+}
+/** end wrapper **/
+/** start main about **/
+.main_about .main_img img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 2%;
+}
+.main_about .h1
+{
+  color : var(--heading-Color);
+}
+.main_about .text1,
+.main_about .text2
+{
+  color: var(--text-color);
+  margin: 10px 0;
+  word-break: break-all;
+}
+.main_about .slider
+{
+  overflow: hidden;
+  margin: 1.5rem 0;
+  position: relative;
+}
+.main_about .slider img
+{
+  width: 40%;
+  height: 50%;
+  margin-right: 1rem;
+  border-radius: 10%;
+}
+.btn_click
+{
+  position: absolute;
+  top: 45%;
+  z-index: 12222;
+}
+.left
+{
+  left:5%;
+}
+.right
+{
+  right: 5%;
+}
+.slider button
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  margin: 5px;
+  background-color: #ddd;
+}
+.slider button:hover
+{
+    background-color: var(--main-color);
+    transition: var(--main-transation) ease-in-out;
+}
+.slider button a
+{
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.slider button:hover a
+{
+  color: white;
+  transition: var(--main-transation) ease-in-out;
+}
+/** end main about **/
+/** start provide **/
+.provide .h1
+{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--heading-Color);
+}
+.cards
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 0 70px;
+}
+.cards .box
+{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ececec;
+  border-radius: 1rem;
+  text-align: center;
+  word-break: break-all;
+}
+.cards .box:hover
+{
+  cursor: pointer;
+  box-shadow: 0 0 5px 1px #ececec;
+}
+.cards .box img
+{
+width: 5rem;
+}
+.cards .box p
+{
+  color: var(--heading-Color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.cards .box span
+{
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 15px 0;
+}
+.cards .box a
+{
+  color: var(--main-color);
+  text-decoration: none;
+  margin: 10px 0;
+}
+.cards .box a:hover
+{
+  cursor: pointer;
+  transition: var(--main-transation) ease-in-out;
+  color: GOLD;
+}
+/** end provide **/
+/** start performance **/
+.performance
+{
+  padding: 20px;
+}
+.performance .content,
+.performance .challenge
+{
+  padding: 50px;
+}
+.pic,
+.txt
+{
+  flex-basis: 45%;
+}
+/** end performance **/
+/** start team **/
+.team .container
+{
+  padding:0 70px;
+}
+/** end team  **/
+@media (max-width :767px)
+{
+  .cards ,
+  .performance ,
+  .performance .content ,
+  .performance .challenge ,
+  .team .container {    padding: 0;  }
+
+}

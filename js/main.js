@@ -176,6 +176,8 @@ $(document).ready(function ()
       $(this).append(divSpan1[i]);
       $(this).append(divSpan2[i]);
     });
+
+
     /// shop page
     let flag = false;
     for (let i = 0; i <= 10; i++)
@@ -206,4 +208,22 @@ $(document).ready(function ()
       }
 
     };
+
+
+    // about page
+    /*
+    let img_slider = document.getElementsByClassName('img_slider');
+    let slider = document.getElementsByClassName('slider');
+    let btn_right = document.getElementsByClassName('right');
+      btn_right.onclick = function ()
+      {
+
+                 slider.style.cssText = "margin : 100px;";
+      };
+/*
+      btn_right.addEventListener('click', function ()
+      {
+         document.getElementsByClassName('img_slider').scrollRight += 100;
+      })
+      */
 }); //end
